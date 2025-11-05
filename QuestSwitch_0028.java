@@ -47,7 +47,7 @@ class QuestSwitch_0028 {
         if(predikat.equals("A (sangar baik)")||predikat.equals("AB (baik sekali)")){
             System.out.println("Selamat predikat anda mencukupi dan anda lolos tahap pertama");
         }else{
-            System.out.println("Mohon maaf, predikat anda masih belum memenuhi kriteria");
+            System.out.println("Mohon maaf, predikat anda masih belum memenuhi kriteria predikat akademik");
         }
 
     }
