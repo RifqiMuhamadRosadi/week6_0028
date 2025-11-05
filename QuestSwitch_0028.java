@@ -44,5 +44,11 @@ class QuestSwitch_0028 {
         System.out.println("IPK: " + nIPK);
         System.out.println("predikat nilai: " + predikat);
 
+        if(predikat.equals("A (sangar baik)")||predikat.equals("AB (baik sekali)")){
+            System.out.println("Selamat predikat anda mencukupi dan anda lolos tahap pertama");
+        }else{
+            System.out.println("Mohon maaf, predikat anda masih belum memenuhi kriteria");
+        }
+
     }
 }
