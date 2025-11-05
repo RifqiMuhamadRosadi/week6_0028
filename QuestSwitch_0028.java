@@ -4,7 +4,8 @@ class QuestSwitch_0028 {
     public static void main(String[] args) {
         Scanner ns = new Scanner(System.in);
         String predikat;
-        String statusKelulusan = "tidak lulus";
+        String matkul = "anda belum memilih";
+        String statusKelulusan = "belum memenuhi syarat untuk posisi tersebut";
         int pilihanMatkul;
         float nRataRata, nIPK, nStrukturData, nPBO, nBasisData, nAlgoritmaPemro, nRPL;
 
@@ -61,41 +62,51 @@ class QuestSwitch_0028 {
             switch (pilihanMatkul) {
                 case 1:
                     if (nStrukturData >= 75) {
-                        statusKelulusan = "lulus";
+                        statusKelulusan = "eligible";
+                        matkul = "struktur data";
                     } else {
-                        statusKelulusan = "tidak lulus";
+                        statusKelulusan = "belum memenuhi syarat";
+                        matkul = "struktur data";
                     }
                     break;
 
                 case 2:
                     if (nPBO >= 75) {
-                        statusKelulusan = "lulus";
+                        statusKelulusan = "eligible";
+                        matkul = "pemrograman berorientasi objek";
                     } else {
-                        statusKelulusan = "tidak lulus";
+                        statusKelulusan = "belum memenuhi syarat";
+                        matkul = "pemrograman berorientasi objek";
                     }
                     break;
 
                 case 3:
                     if (nBasisData >= 75) {
-                        statusKelulusan = "lulus";
+                        statusKelulusan = "eligible";
+                        matkul = "basis data";
                     } else {
-                        statusKelulusan = "tidak lulus";
+                        statusKelulusan = "belum memenuhi syarat";
+                        matkul = "basis data";
                     }
                     break;
 
                 case 4:
                     if (nAlgoritmaPemro >= 75) {
-                        statusKelulusan = "lulus";
+                        statusKelulusan = "eligible";
+                        matkul = "algoritma dan pemrograman";
                     } else {
-                        statusKelulusan = "tidak lulus";
+                        statusKelulusan = "belum memenuhi syarat";
+                        matkul = "algoritma dan pemrograman";
                     }
                     break;
 
                 case 5:
                     if (nRPL >= 75) {
-                        statusKelulusan = "lulus";
+                        statusKelulusan = "eligible";
+                        matkul = "rekayasa perangkat lunak";
                     } else {
-                        statusKelulusan = "tidak lulus";
+                        statusKelulusan = "belum memenuhi syarat";
+                        matkul = "rekayasa perangkat lunak";
                     }
                     break;
 
@@ -104,7 +115,8 @@ class QuestSwitch_0028 {
                     break;
             }
             System.out.println("");
-            System.out.println("anda dinyatakan " + statusKelulusan);
+            System.out.print("anda dinyatakan " + statusKelulusan);
+            System.out.print(" menjadi asisten pada matkul " + matkul);
 
         } else {
             System.out.println("mohon maaf, predikat anda masih belum memenuhi kriteria predikat akademik maka anda"
