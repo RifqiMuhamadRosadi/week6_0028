@@ -4,10 +4,11 @@ class QuestSwitch_0028 {
     public static void main(String[] args) {
         Scanner ns = new Scanner(System.in);
         String predikat;
+        String statusKelulusan = "tidak lulus";
         int pilihanMatkul;
         float nRataRata, nIPK, nStrukturData, nPBO, nBasisData, nAlgoritmaPemro, nRPL;
 
-        System.out.println("Seleksi Pemilihan Asdos berdasarkan nilai akademik");
+        System.out.println("Seleksi Pemilihan asisten berdasarkan nilai akademik");
         System.out.println("Masukkan nilai akhir dari matakuliah dibawah ini");
 
         System.out.print("Struktur Data: ");
@@ -57,9 +58,57 @@ class QuestSwitch_0028 {
             System.out.print("pilih (1-5): ");
             pilihanMatkul = ns.nextInt();
 
-        } else {
-            System.out.println("Mohon maaf, predikat anda masih belum memenuhi kriteria predikat akademik");
-        }
+            switch (pilihanMatkul) {
+                case 1:
+                    if (nStrukturData >= 75) {
+                        statusKelulusan = "lulus";
+                    } else {
+                        statusKelulusan = "tidak lulus";
+                    }
+                    break;
 
+                case 2:
+                    if (nPBO >= 75) {
+                        statusKelulusan = "lulus";
+                    } else {
+                        statusKelulusan = "tidak lulus";
+                    }
+                    break;
+
+                case 3:
+                    if (nBasisData >= 75) {
+                        statusKelulusan = "lulus";
+                    } else {
+                        statusKelulusan = "tidak lulus";
+                    }
+                    break;
+
+                case 4:
+                    if (nAlgoritmaPemro >= 75) {
+                        statusKelulusan = "lulus";
+                    } else {
+                        statusKelulusan = "tidak lulus";
+                    }
+                    break;
+
+                case 5:
+                    if (nRPL >= 75) {
+                        statusKelulusan = "lulus";
+                    } else {
+                        statusKelulusan = "tidak lulus";
+                    }
+                    break;
+
+                default:
+                    System.out.println("pilihan tidak valid");
+                    break;
+            }
+            System.out.println("");
+            System.out.println("anda dinyatakan " + statusKelulusan);
+
+        } else {
+            System.out.println("mohon maaf, predikat anda masih belum memenuhi kriteria predikat akademik maka anda"
+                    + statusKelulusan);
+        }
     }
 }
