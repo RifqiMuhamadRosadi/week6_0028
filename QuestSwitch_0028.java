@@ -44,9 +44,20 @@ class QuestSwitch_0028 {
         System.out.println("IPK: " + nIPK);
         System.out.println("predikat nilai: " + predikat);
 
-        if(predikat.equals("A (sangar baik)")||predikat.equals("AB (baik sekali)")){
+        if (predikat.equals("A (sangar baik)") || predikat.equals("AB (baik sekali)")) {
             System.out.println("Selamat predikat anda mencukupi dan anda lolos tahap pertama");
-        }else{
+            System.out.println("silahkan lanjut memilih matkul yang kamu inginkan untuk menjadi asisten");
+            System.out.println("");
+            System.out.println("Daftar Mata Kuliah:");
+            System.out.println("1. Struktur Data");
+            System.out.println("2. Pemrograman Berorientasi Objek");
+            System.out.println("3. Basis Data");
+            System.out.println("4. Algoritma dan Pemrograman");
+            System.out.println("5. Rekayasa Perangkat Lunak");
+            System.out.print("pilih (1-5): ");
+            pilihanMatkul = ns.nextInt();
+
+        } else {
             System.out.println("Mohon maaf, predikat anda masih belum memenuhi kriteria predikat akademik");
         }
 
